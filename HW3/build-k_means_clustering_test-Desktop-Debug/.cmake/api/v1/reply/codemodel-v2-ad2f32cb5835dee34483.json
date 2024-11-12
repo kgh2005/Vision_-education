@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-40655057b15fc07b3109.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "k_means_clustering_test",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "k_means_clustering_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-k_means_clustering_test-Debug-001daf98adf00c9cf3f2.json",
+					"name" : "k_means_clustering_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "k_means_clustering_test_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-k_means_clustering_test_autogen-Debug-5dcf48e4a8b2352c8daf.json",
+					"name" : "k_means_clustering_test_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kgh/robot_ws/src/Vision_education/HW3/build-k_means_clustering_test-Desktop-Debug",
+		"source" : "/home/kgh/robot_ws/src/Vision_education/HW3/k_means_clustering_test"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

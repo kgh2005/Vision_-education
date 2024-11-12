@@ -1,0 +1,22 @@
+{
+	"BUILD_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/ransac_test_autogen",
+	"CMAKE_BINARY_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW1/ransac_test",
+	"CMAKE_SOURCE_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW1/ransac_test",
+	"INCLUDE_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/ransac_test_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/kgh/robot_ws/src/Vision_education/HW1/ransac_test/resources/data/coordinates.csv"
+	],
+	"LOCK_FILE" : "/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/CMakeFiles/ransac_test_autogen.dir/AutoRcc_ransac_test_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "ransac_test" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_ransac_test.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt5/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/CMakeFiles/ransac_test_autogen.dir/AutoRcc_ransac_test_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/kgh/robot_ws/src/Vision_education/HW1/ransac_test/ransac_test.qrc",
+	"VERBOSITY" : 0
+}

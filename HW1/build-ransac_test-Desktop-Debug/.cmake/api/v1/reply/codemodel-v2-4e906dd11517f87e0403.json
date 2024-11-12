@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-e4b729e32247cd1b560e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ransac_test",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ransac_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ransac_test-Debug-db77d69addf0c155cfe1.json",
+					"name" : "ransac_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ransac_test_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ransac_test_autogen-Debug-18dc7d1e5cae12f30c2f.json",
+					"name" : "ransac_test_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug",
+		"source" : "/home/kgh/robot_ws/src/Vision_education/HW1/ransac_test"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

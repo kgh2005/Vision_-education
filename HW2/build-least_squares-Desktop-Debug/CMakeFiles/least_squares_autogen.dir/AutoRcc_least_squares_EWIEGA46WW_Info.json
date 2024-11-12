@@ -1,0 +1,22 @@
+{
+	"BUILD_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW2/build-least_squares-Desktop-Debug/least_squares_autogen",
+	"CMAKE_BINARY_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW2/build-least_squares-Desktop-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW2/build-least_squares-Desktop-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW2/least_squares",
+	"CMAKE_SOURCE_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW2/least_squares",
+	"INCLUDE_DIR" : "/home/kgh/robot_ws/src/Vision_education/HW2/build-least_squares-Desktop-Debug/least_squares_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/kgh/robot_ws/src/Vision_education/HW2/least_squares/resources/data/coordinates.csv"
+	],
+	"LOCK_FILE" : "/home/kgh/robot_ws/src/Vision_education/HW2/build-least_squares-Desktop-Debug/CMakeFiles/least_squares_autogen.dir/AutoRcc_least_squares_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "least_squares" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_least_squares.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt5/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/kgh/robot_ws/src/Vision_education/HW2/build-least_squares-Desktop-Debug/CMakeFiles/least_squares_autogen.dir/AutoRcc_least_squares_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/kgh/robot_ws/src/Vision_education/HW2/least_squares/least_squares.qrc",
+	"VERBOSITY" : 0
+}

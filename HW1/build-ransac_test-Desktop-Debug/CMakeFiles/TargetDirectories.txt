@@ -1,0 +1,8 @@
+/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/CMakeFiles/ransac_test.dir
+/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/CMakeFiles/install.dir
+/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/CMakeFiles/install/local.dir
+/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/CMakeFiles/install/strip.dir
+/home/kgh/robot_ws/src/Vision_education/HW1/build-ransac_test-Desktop-Debug/CMakeFiles/ransac_test_autogen.dir

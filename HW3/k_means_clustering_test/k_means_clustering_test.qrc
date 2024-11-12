@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/data/cluster_data_.csv</file>
+    </qresource>
+</RCC>
+
