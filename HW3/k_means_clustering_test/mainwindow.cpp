@@ -1,3 +1,20 @@
+/*
+CSV 데이터를 분석해보면 약 600개의 데이터가 존재한다.
+x, y좌표 통해 분석해보면
+- x좌표가 대체로 음수이고, y좌표가 10-20사이
+- x좌표가 양수(4-12 사이)이고, y좌표가 0-10 사이
+- x좌표가 양수(7-14 사이)이고, y좌표가 8-17 사이
+
+이렇게 크게 3가지로 나뉠 수 있다.
+저런식으로 약 200개의 데이터로 나누어 k를 3으로 지정해주었다.
+
+k = 4 이상일 경우 k = 3보다 인위적으로 나눠질 수 있다.
+이는 계산 복잡도를 증가 시키며 클러스터 간 구분이 모호해진다는 문제점이 생길 수 있다.
+
+k = 2 경우 x좌표가 음수인 그룹과 양수인 그룹으로 나눌 수 있다. 이렇게 될 경우 k = 3일 때보다 WSS가 증가할 것이다.
+(데이터들이 중심점으로부터 더 멀리 퍼져있다는 것을 의미)
+이렇게 될 경우 클러스터링의 품질이 감소할 것이다.
+*/
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QFile>
@@ -69,13 +86,12 @@ void MainWindow::loadCSVData(const QString &fileName)
     }
     file.close();
 
-    // 최적의 k 값 찾기
-    int optimalK = findOptimalK(points);
-    qDebug() << "Optimal K:" << optimalK;
+    // k값 직접 지정
+    const int k = 3;  // 원하는 k값으로 변경 가능
 
     // K-means 클러스터링 수행
     QVector<Point> clusteredPoints = initializeClusters(points);
-    QVector<Centroid> centroids = initializeCentroids(clusteredPoints, optimalK);
+    QVector<Centroid> centroids = initializeCentroids(clusteredPoints, k);
 
     bool converged = false;
     int maxIterations = 100;
@@ -83,13 +99,14 @@ void MainWindow::loadCSVData(const QString &fileName)
 
     while (!converged && iteration < maxIterations) {
         updateClusters(clusteredPoints, centroids);
-        QVector<Centroid> newCentroids = updateCentroids(clusteredPoints, optimalK);
+        QVector<Centroid> newCentroids = updateCentroids(clusteredPoints, k);
         converged = hasConverged(centroids, newCentroids);
         centroids = newCentroids;
         iteration++;
     }
 
     qDebug() << "K-means converged after" << iteration << "iterations";
+    qDebug() << "Final WSS:" << calculateWSS(clusteredPoints, centroids);
 
     // 클러스터 시각화
     visualizeClusters(clusteredPoints);
@@ -224,36 +241,6 @@ double MainWindow::calculateWSS(const QVector<Point>& points, const QVector<Cent
         wss += minDist;
     }
     return wss;
-}
-
-int MainWindow::findOptimalK(const QVector<QPointF>& points, int minK, int maxK)
-{
-    QVector<Point> clusteredPoints = initializeClusters(points);
-    QVector<double> wss;
-
-    for (int k = minK; k <= maxK; k++) {
-        QVector<Centroid> centroids = initializeCentroids(clusteredPoints, k);
-        bool converged = false;
-        int maxIterations = 100;
-        int iteration = 0;
-
-        while (!converged && iteration < maxIterations) {
-            updateClusters(clusteredPoints, centroids);
-            QVector<Centroid> newCentroids = updateCentroids(clusteredPoints, k);
-            converged = hasConverged(centroids, newCentroids);
-            centroids = newCentroids;
-            iteration++;
-        }
-
-        double currentWss = calculateWSS(clusteredPoints, centroids);
-        wss.append(currentWss);
-
-        qDebug() << "K:" << k << "WSS:" << currentWss;
-    }
-
-    // 엘보우 포인트 찾기 (가장 큰 기울기 변화점)
-    int optimalK = 3;  // 데이터 분석 결과 실제 클러스터 수가 3임
-    return optimalK;
 }
 
 void MainWindow::visualizeClusters(const QVector<Point>& points)

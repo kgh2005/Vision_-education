@@ -7,7 +7,6 @@
 #include <QVector>
 #include <QRandomGenerator>
 
-
 namespace Ui {
 class MainWindow;
 }
@@ -21,11 +20,11 @@ public:
     ~MainWindow();
 
 private:
-    // ModelParameters 구조체 추가
+    // ModelParameters 구조체
     struct ModelParameters {
-        double a;
-        double b;
-        QVector<QPointF> inliers;
+        double a;  // 기울기
+        double b;  // y절편
+        QVector<QPointF> inliers;  // inlier 점들
     };
 
     Ui::MainWindow *ui;
@@ -35,11 +34,11 @@ private:
     void drawAxes();
     void loadCSVData(const QString &fileName);
 
-    // RANSAC 관련 함수 선언 추가
+    // RANSAC 관련 함수들
     ModelParameters ransac(const QVector<QPointF>& points,
-                         int maxIterations = 1000,
-                         double threshold = 100.0,
-                         int minInliers = 10);
+                         int iterations = 500,        // 고정된 반복 횟수
+                         double threshold = 50.0);    // inlier 판단 거리
+
     ModelParameters fitLine(const QVector<QPointF>& points);
     double computeDistance(const QPointF& point, double a, double b);
     void drawModel(const ModelParameters& model, const QColor& color);
